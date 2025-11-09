@@ -4,7 +4,6 @@
 #include <drm/drm_crtc.h>
 #include <drm/drm_encoder.h>
 #include <drm/drm_connector.h>
-#include <drm/drm_dp_mst_helper.h>
 
 MODULE_AUTHOR("Roo");
 MODULE_DESCRIPTION("Minimal ST7796S DRM/KMS driver stub");
