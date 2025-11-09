@@ -20,18 +20,11 @@ static void st7796s_remove(struct platform_device *pdev)
     pr_info("ST7796S KMS driver: Remove called.\n");
 }
 
-static const struct platform_device_id st7796s_of_match[] = {
-    { .compatible = "st,st7796s", },
-    { /* sentinel */ }
-};
-MODULE_DEVICE_TABLE(of, st7796s_of_match);
-
 static struct platform_driver st7796s_driver = {
     .probe      = st7796s_probe,
     .remove     = st7796s_remove,
     .driver     = {
         .name   = "st7796s-kms",
-        .id_table = st7796s_of_match,
     },
 };
 
