@@ -15,13 +15,12 @@ static int st7796s_probe(struct platform_device *pdev)
     return 0;
 }
 
-static int st7796s_remove(struct platform_device *pdev)
+static void st7796s_remove(struct platform_device *pdev)
 {
     pr_info("ST7796S KMS driver: Remove called.\n");
-    return 0;
 }
 
-static const struct of_device_id st7796s_of_match[] = {
+static const struct platform_device_id st7796s_of_match[] = {
     { .compatible = "st,st7796s", },
     { /* sentinel */ }
 };
@@ -32,7 +31,7 @@ static struct platform_driver st7796s_driver = {
     .remove     = st7796s_remove,
     .driver     = {
         .name   = "st7796s-kms",
-        .of_match_table = st7796s_of_match,
+        .id_table = st7796s_of_match,
     },
 };
 
